@@ -26,9 +26,9 @@ So I made a digital clock widget with weather for the XENEON EDGE, and I'm shari
 | --- | --- |
 | ![S size](screenshots/widget-S.png) | ![M size](screenshots/widget-M.png) |
 
-| L |
-| --- |
-| ![L size](screenshots/widget-L.png) |
+| L | XL |
+| --- | --- |
+| ![L size](screenshots/widget-L.png) | ![XL size](screenshots/widget-XL.png) |
 
 ## Installation
 
