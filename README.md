@@ -1,4 +1,4 @@
-# Clock and Weather widget for CORSAIR XENEON EDGE
+# xeneon edge clock weather widget
 
 When I started using my XENEON EDGE, I couldn't find a single widget that combines the weather, time and date. Every widget is separate, and that gets annoying because you end up adding 3 or 4 widgets.
 
