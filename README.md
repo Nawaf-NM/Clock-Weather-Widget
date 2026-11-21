@@ -38,7 +38,9 @@ So I made a digital clock widget with weather for the XENEON EDGE, and I'm shari
 - Windows
 - Not tested on Mac
 
-**Download:** [clock-and-weather-0.0.2.icuewidget](https://github.com/Nawaf-NM/Clock-Weather-Widget/raw/main/clock-and-weather-0.0.2.icuewidget)
+## Download
+
+- [Releases page](https://github.com/Nawaf-NM/Clock-Weather-Widget/releases)
 
 ## Notes
 
