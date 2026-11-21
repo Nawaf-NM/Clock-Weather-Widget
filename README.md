@@ -1,8 +1,8 @@
 # Clock and Weather widget for CORSAIR XENEON EDGE
 
-A digital clock and weather widget for the CORSAIR XENEON EDGE that puts the time, date and weather in one widget instead of three or four separate ones. It shows a large clock in 12-hour or 24-hour format with a small seconds counter, the day and date on one line (Gregorian or Hijri, in nine different formats) with your city and country underneath, and the current weather for your city on both sides of the clock: temperature, day or night, and the chance of rain. One tap on the widget opens a weather details screen with the feels-like temperature, humidity, wind speed, sunrise and sunset, and it returns to the clock with a second tap or automatically after the time you choose.
+A digital clock and weather widget for the CORSAIR XENEON EDGE that brings the time, date and weather together in one widget. It shows a clock in 12-hour or 24-hour format with seconds, the day and date (Gregorian or Hijri) with your city name underneath, and the current weather: temperature, day or night, and the chance of rain. When you tap the screen, it switches to the weather details: feels-like temperature, humidity, wind speed, sunrise and sunset, and then returns to the clock automatically.
 
-In the widget settings you can pick your city by typing its name, switch the temperature unit between Celsius and Fahrenheit, choose the date type and format, set how long the details screen stays open, and customize the text and background colors. It comes in four sizes (S, M, L and XL), the weather labels follow your system language, and it needs no API key, no account and no tracking.
+In the settings you can type your city name and change the temperature unit, the date format, the details duration and the colors. It comes in four sizes (S, M, L and XL), the weather labels follow your system language, and it needs no API key, no account and no tracking.
 
 ![Tap the widget to see the weather details in every size](screenshots/widget-demo-all-sizes.gif)
 
