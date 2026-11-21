@@ -8,17 +8,11 @@ So I made a digital clock widget with weather for the XENEON EDGE, and I'm shari
 
 ## Features
 
-- Large digital clock with a small seconds counter next to the time
-- Day and date on one line (e.g. Saturday | 21-11-2026), with your city and country shown under it (e.g. Riyadh | Saudi Arabia)
-- Weather on both sides of the clock: current temperature and chance of rain, each with its own icon (on the square M size, the weather sits below the clock)
-- Tap the widget to open a weather details screen: feels like temperature, humidity, wind speed, sunrise and sunset. Tap again to go back, or it returns by itself after the time you choose
-- Customizable from the widget settings:
-  - 12-hour (AM/PM) or 24-hour clock
-  - City: type your city name to search for it
-  - Temperature unit: Celsius or Fahrenheit
-  - Weather details duration: 5, 10, 15 or 30 seconds, 1 minute, or until you tap again
-  - Date type: Gregorian or Hijri calendar, with 9 different date formats
-  - Colors: text, secondary text (AM/PM) and background
+- Large digital clock with seconds, 12-hour or 24-hour
+- Day and date on one line, with the city name under it
+- Weather on both sides of the clock: temperature and chance of rain
+- Tap the widget to open a weather details screen: feels like, humidity, wind speed, sunrise and sunset. Tap again to go back, or it returns by itself after the time you choose
+- Everything is customizable in the widget settings: city (type your city name), temperature unit, Gregorian or Hijri date with many formats, weather details duration, and colors
 - Four sizes: S, M, L and XL
 - Weather labels follow your system language
 
@@ -38,17 +32,31 @@ So I made a digital clock widget with weather for the XENEON EDGE, and I'm shari
 
 ## Installation
 
-1. [Download clock-and-weather-0.0.2.icuewidget](https://github.com/Nawaf-NM/xeneon-edge-clock-weather-widget/raw/main/clock-and-weather-0.0.2.icuewidget)
-2. In iCUE, import the widget
-3. Add it to your XENEON EDGE screen and pick the size you like
+- Download the .icuewidget file from the link below
+- In iCUE, import the widget
+- Add it to your XENEON EDGE screen and pick the size you like
 
-Requires iCUE 5.47 or newer on Windows.
+## Requirements
+
+- iCUE 5.47 or newer
+- Windows
+- Not tested on Mac
+
+**Download:** [clock-and-weather-0.0.2.icuewidget](https://github.com/Nawaf-NM/xeneon-edge-clock-weather-widget/raw/main/clock-and-weather-0.0.2.icuewidget)
 
 ## Notes
 
-- **Privacy:** The widget sends the selected city's coordinates to Open-Meteo to get the weather (including the details shown when you tap the widget), and sends the city names you type to Open-Meteo's search to find your city. It also reads your approximate location from iCUE to pick the default city. There is no API key, no account and no tracking in the code. The widget is only allowed to contact open-meteo.com.
+- **Privacy:** The widget sends the selected city's coordinates to Open-Meteo to get the weather, and sends the city names you type to Open-Meteo's search. It reads your approximate location from iCUE to pick the default city. There is no API key, no account and no tracking in the code.
 - **Weather data:** provided by [Open-Meteo.com](https://open-meteo.com/) under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/).
 - **Trademarks:** Corsair, iCUE and XENEON EDGE are trademarks of their respective owners. This widget is unofficial and is a personal project of mine.
+
+---
+
+## Update: version 0.0.2 is out!
+
+- Tap the widget to open a weather details screen: feels like, humidity, wind speed, sunrise and sunset. Tap again to go back, or it returns by itself after the time you choose.
+- New setting: weather details duration (5, 10, 15 or 30 seconds, 1 minute, or until you tap again).
+- Your city and country are now shown under the date.
 
 ## Contact
 
