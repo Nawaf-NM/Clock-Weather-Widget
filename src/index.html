@@ -12,6 +12,7 @@
 <meta name="x-icue-property" content="backgroundColor" data-label="tr('Background Color')" data-type="color" data-default="'#000000'" />
 <meta name="x-icue-property" content="tempUnit" data-label="tr('Temperature Unit')" data-type="combobox" data-default="'C'" data-values="['C', 'F']" />
 <meta name="x-icue-property" content="timeFormat" data-label="tr('Time Format')" data-type="combobox" data-default="'12h'" data-values="[{'key':'12h','value':tr('12-hour')},{'key':'24h','value':tr('24-hour')}]" />
+<meta name="x-icue-property" content="detailsTime" data-label="tr('Weather Details Duration')" data-type="combobox" data-default="'10'" data-values="[{'key':'5','value':tr('5 seconds')},{'key':'10','value':tr('10 seconds')},{'key':'15','value':tr('15 seconds')},{'key':'30','value':tr('30 seconds')},{'key':'60','value':tr('1 minute')},{'key':'0','value':tr('Until tapped again')}]" />
 <meta name="x-icue-property" content="devName" data-label="'Developer Name'" data-type="textfield" data-default="'Nawaf AlMutairi'" />
 <meta name="x-icue-property" content="devLink" data-label="'Link'" data-type="textfield" data-default="'https://Nawaf-Blog.com/NM'" />
 <meta name="x-icue-property" content="dateType" data-label="tr('Date Type')" data-type="combobox" data-default="'gregorian'" data-values="[{'key':'gregorian','value':tr('Gregorian')},{'key':'hijri','value':tr('Hijri')}]" />
@@ -20,7 +21,7 @@
 
 <script type="application/json" id="x-icue-groups">
 [
-	{ "title": "tr('Clock and Weather')", "properties": ["weatherLocation", "tempUnit", "timeFormat", "devName", "devLink"] },
+	{ "title": "tr('Clock and Weather')", "properties": ["weatherLocation", "tempUnit", "timeFormat", "detailsTime", "devName", "devLink"] },
 	{ "title": "tr('Date')", "properties": ["dateType", "dateFormat"] },
 	{ "title": "tr('Appearance')", "properties": ["textColor", "mutedColor", "backgroundColor"] }
 ]
@@ -44,13 +45,22 @@
 			</div>
 			<div class="side" id="side"><span class="sec" id="sec">00</span><span class="ap" id="ap">AM</span></div>
 		</div>
-		<div class="date" id="date"><span class="fit" id="dateFit"><span class="seg day" id="dateDay"></span><span class="sep">|</span><span class="seg num" id="dateNum">--</span></span></div>
+		<div class="date" id="date"><span class="fit" id="dateFit"><span class="seg day" id="dateDay"></span><span class="sep">|</span><span class="seg num" id="dateNum">--</span></span>
+			<div class="cbox" id="cityBox" hidden><div class="rule"></div><div class="city" id="city"><span id="cityName"></span><span class="csep" id="citySep">|</span><span id="cityCc"></span></div></div>
+		</div>
 	</div>
 
 	<div class="cell rain" id="rain">
 		<div id="rainIcon"></div>
 		<div class="big" id="rainPct">--%</div>
 		<div class="lbl" id="rainLbl">--</div>
+	</div>
+	<div class="details" id="details" aria-hidden="true">
+		<div class="dcell"><div class="dico" id="dFeelsIco"></div><div class="dval" id="dFeels">--</div><div class="dlbl" id="dFeelsL"></div></div>
+		<div class="dcell"><div class="dico" id="dHumIco"></div><div class="dval" id="dHum">--</div><div class="dlbl" id="dHumL"></div></div>
+		<div class="dcell"><div class="dico" id="dWindIco"></div><div class="dval" id="dWind">--</div><div class="dlbl" id="dWindL"></div></div>
+		<div class="dcell"><div class="dico" id="dRiseIco"></div><div class="dval" id="dRise">--</div><div class="dlbl" id="dRiseL"></div></div>
+		<div class="dcell"><div class="dico" id="dSetIco"></div><div class="dval" id="dSet">--</div><div class="dlbl" id="dSetL"></div></div>
 	</div>
 </div></div>
 <script src="scripts/main.js"></script>

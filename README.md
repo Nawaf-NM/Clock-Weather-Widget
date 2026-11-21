@@ -9,12 +9,14 @@ So I made a digital clock widget with weather for the XENEON EDGE, and I'm shari
 ## Features
 
 - Large digital clock with a small seconds counter next to the time
-- Day and date on one line (e.g. Friday | 20-11-2026)
+- Day and date on one line (e.g. Saturday | 21-11-2026), with your city and country shown under it (e.g. Riyadh | Saudi Arabia)
 - Weather on both sides of the clock: current temperature and chance of rain, each with its own icon (on the square M size, the weather sits below the clock)
+- Tap the widget to open a weather details screen: feels like temperature, humidity, wind speed, sunrise and sunset. Tap again to go back, or it returns by itself after the time you choose
 - Customizable from the widget settings:
   - 12-hour (AM/PM) or 24-hour clock
   - City: type your city name to search for it
   - Temperature unit: Celsius or Fahrenheit
+  - Weather details duration: 5, 10, 15 or 30 seconds, 1 minute, or until you tap again
   - Date type: Gregorian or Hijri calendar, with 9 different date formats
   - Colors: text, secondary text (AM/PM) and background
 - Four sizes: S, M, L and XL
@@ -30,9 +32,17 @@ So I made a digital clock widget with weather for the XENEON EDGE, and I'm shari
 | --- | --- |
 | ![L size](screenshots/widget-L.png) | ![XL size](screenshots/widget-XL.png) |
 
+### Weather details (tap the widget)
+
+![Weather details](screenshots/widget-details-XL.png)
+
+### 24-hour clock
+
+![24-hour clock](screenshots/widget-24h-XL.png)
+
 ## Installation
 
-1. [Download clock-and-weather.icuewidget](https://github.com/Nawaf-NM/xeneon-edge-clock-weather-widget/raw/main/clock-and-weather.icuewidget) (version 0.0.1)
+1. [Download clock-and-weather.icuewidget](https://github.com/Nawaf-NM/xeneon-edge-clock-weather-widget/raw/main/clock-and-weather.icuewidget) (version 0.0.2)
 2. In iCUE, import the widget
 3. Add it to your XENEON EDGE screen and pick the size you like
 
@@ -44,7 +54,7 @@ The widget source (HTML, JavaScript and CSS) is in the [src](src) folder.
 
 ## Notes
 
-- **Privacy:** The widget sends the selected city's coordinates to Open-Meteo to get the weather, and sends the city names you type to Open-Meteo's search to find your city. It also reads your approximate location from iCUE to pick the default city. There is no API key, no account and no tracking in the code. The widget is only allowed to contact open-meteo.com.
+- **Privacy:** The widget sends the selected city's coordinates to Open-Meteo to get the weather (including the details shown when you tap the widget), and sends the city names you type to Open-Meteo's search to find your city. It also reads your approximate location from iCUE to pick the default city. There is no API key, no account and no tracking in the code. The widget is only allowed to contact open-meteo.com.
 - **Weather data:** provided by [Open-Meteo.com](https://open-meteo.com/) under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/).
 - **Trademarks:** Corsair, iCUE and XENEON EDGE are trademarks of their respective owners. This widget is unofficial and is a personal project of mine.
 

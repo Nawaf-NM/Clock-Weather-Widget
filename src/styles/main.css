@@ -25,7 +25,7 @@
 		--F: min(17cqw, 40cqh);          /* حجم أرقام الساعة */
 		--icon: min(10cqw, 28cqh);
 		--temp: min(8cqw, 22cqh);
-		--label: min(3.6cqw, 9cqh);
+		--label: min(2.7cqw, 7.5cqh);
 		--date: min(3.4cqw, 8.2cqh);
 	}
 
@@ -97,13 +97,19 @@
 	.date.ltr .sep { order: 2; }
 	.date.ltr .num { order: 3; }
 
+	.cbox[hidden] { display: none; }
+	.cbox .rule { height: 0; border-top: 0.07em solid var(--muted); opacity: 0.45; margin: 0.32em 0 0.28em; width: 100%; }
+	.cbox .city { display: flex; justify-content: center; align-items: baseline; gap: 0.45em; direction: ltr; font-size: 0.66em; font-weight: 600; color: var(--muted); white-space: nowrap; line-height: 1.2; width: 100%; }
+	.cbox .city > span { unicode-bidi: isolate; }
+
 	/* ===== الطقس ===== */
 	.cell { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: calc(var(--label) * 0.25); font-family: var(--ui-font); min-width: 0; }
 	.cell.wx { grid-area: wx; }
 	.cell.rain { grid-area: rain; }
+	.cell.wx svg { transform: translateY(5%); }
 	.cell svg { width: var(--icon); height: var(--icon); display: block; overflow: visible; }
-	.cell .big { font-family: var(--clock-font); font-weight: 700; font-variation-settings: "wdth" 75, "wght" 700; font-size: var(--temp); line-height: 0.95; direction: ltr; white-space: nowrap; }
-	.cell .lbl { font-size: var(--label); font-weight: 600; line-height: 1.2; color: var(--muted); white-space: nowrap; }
+	.cell .big { height: calc(var(--temp) * 0.95); font-family: var(--clock-font); font-weight: 700; font-variation-settings: "wdth" 75, "wght" 700; font-size: var(--temp); line-height: 0.95; direction: ltr; white-space: nowrap; }
+	.cell .lbl { font-size: var(--label); font-weight: 600; line-height: 1.2; color: var(--muted); white-space: nowrap; height: calc(var(--label) * 1.2); display: flex; align-items: center; justify-content: center; width: 100%; }
 	.stale .big, .stale svg { opacity: 0.55; }
 	.dot { display: none; }
 	.stale .dot { display: inline-block; width: 0.45em; height: 0.45em; border-radius: 50%; background: #FF9F43; margin-inline-start: 0.4em; vertical-align: middle; }
@@ -114,3 +120,19 @@
 	.date.txt.rtl .num { direction: rtl; }
 	.side.h24 { justify-content: center; }
 	.side.h24 .ap { display: none; }
+
+	/* ===== شاشة تفاصيل الطقس (عند اللمس) ===== */
+	.details { display: none; grid-column: 1 / -1; grid-row: 1 / -1; align-self: stretch; justify-self: stretch; width: 100%; height: 100%; grid-template-columns: repeat(5, 1fr); align-items: center; justify-items: center; font-family: var(--ui-font); color: var(--fg); --di: min(8.5cqw, 29cqh); --dv: min(6.2cqw, 21cqh); --dl: min(2.3cqw, 7.5cqh); }
+	#layout.show-details > .cell, #layout.show-details > .center { display: none; }
+	#layout.show-details > .details { display: grid; }
+	.dcell { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: calc(var(--dl) * 0.3); min-width: 0; width: 100%; }
+	.dico svg { width: var(--di); height: var(--di); display: block; overflow: visible; }
+	.dval { font-family: var(--clock-font); font-weight: 700; font-variation-settings: "wdth" 75, "wght" 700; font-size: var(--dv); line-height: 0.95; height: calc(var(--dv) * 0.95); direction: ltr; white-space: nowrap; display: flex; align-items: baseline; justify-content: center; width: 100%; }
+	.dval small { font-family: var(--ui-font); font-size: 0.36em; font-weight: 600; color: var(--muted); margin-inline-start: 0.2em; font-variation-settings: normal; }
+	.dlbl { font-size: var(--dl); font-weight: 600; line-height: 1.2; color: var(--muted); white-space: nowrap; height: calc(var(--dl) * 1.2); display: flex; align-items: center; justify-content: center; width: 100%; }
+	@container (max-aspect-ratio: 3/2) {
+		.details { grid-template-columns: repeat(6, 1fr); grid-template-rows: auto auto; row-gap: 6cqh; align-self: center; height: auto; --di: min(11cqw, 16cqh); --dv: min(8.5cqw, 12cqh); --dl: min(3.4cqw, 5cqh); }
+		.dcell { grid-column: span 2; }
+		.dcell:nth-child(4) { grid-column: 2 / span 2; }
+		.dcell:nth-child(5) { grid-column: 4 / span 2; }
+	}
