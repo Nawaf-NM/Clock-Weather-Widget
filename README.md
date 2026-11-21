@@ -44,10 +44,6 @@ So I made a digital clock widget with weather for the XENEON EDGE, and I'm shari
 
 Requires iCUE 5.47 or newer on Windows.
 
-## Source code
-
-The widget source (HTML, JavaScript and CSS) is in the [src](src) folder.
-
 ## Notes
 
 - **Privacy:** The widget sends the selected city's coordinates to Open-Meteo to get the weather (including the details shown when you tap the widget), and sends the city names you type to Open-Meteo's search to find your city. It also reads your approximate location from iCUE to pick the default city. There is no API key, no account and no tracking in the code. The widget is only allowed to contact open-meteo.com.
