@@ -38,7 +38,7 @@ So I made a digital clock widget with weather for the XENEON EDGE, and I'm shari
 
 ## Installation
 
-1. [Download clock-and-weather.icuewidget](https://github.com/Nawaf-NM/xeneon-edge-clock-weather-widget/raw/main/clock-and-weather.icuewidget) (version 0.0.2)
+1. [Download clock-and-weather-0.0.2.icuewidget](https://github.com/Nawaf-NM/xeneon-edge-clock-weather-widget/raw/main/clock-and-weather-0.0.2.icuewidget)
 2. In iCUE, import the widget
 3. Add it to your XENEON EDGE screen and pick the size you like
 
