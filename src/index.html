@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ar" dir="ltr">
+<head>
+<meta charset="UTF-8" />
+<title>tr('Clock and Weather')</title>
+<link rel="icon" type="image/svg+xml" href="resources/icon.svg" />
+<link rel="stylesheet" href="styles/main.css" />
+<script src="modules/CitySearch.mjs"></script>
+
+<meta name="x-icue-property" content="textColor" data-label="tr('Text Color')" data-type="color" data-default="'#FFFFFF'" />
+<meta name="x-icue-property" content="mutedColor" data-label="tr('Secondary Text Color (AM/PM)')" data-type="color" data-default="'#B4B4B4'" />
+<meta name="x-icue-property" content="backgroundColor" data-label="tr('Background Color')" data-type="color" data-default="'#000000'" />
+<meta name="x-icue-property" content="tempUnit" data-label="tr('Temperature Unit')" data-type="combobox" data-default="'C'" data-values="['C', 'F']" />
+<meta name="x-icue-property" content="timeFormat" data-label="tr('Time Format')" data-type="combobox" data-default="'12h'" data-values="[{'key':'12h','value':tr('12-hour')},{'key':'24h','value':tr('24-hour')}]" />
+<meta name="x-icue-property" content="devName" data-label="'Developer Name'" data-type="textfield" data-default="'Nawaf AlMutairi'" />
+<meta name="x-icue-property" content="devLink" data-label="'Link'" data-type="textfield" data-default="'https://Nawaf-Blog.com/NM'" />
+<meta name="x-icue-property" content="dateType" data-label="tr('Date Type')" data-type="combobox" data-default="'gregorian'" data-values="[{'key':'gregorian','value':tr('Gregorian')},{'key':'hijri','value':tr('Hijri')}]" />
+<meta name="x-icue-property" content="dateFormat" data-label="tr('Date Format')" data-type="combobox" data-default="'wd_dmy'" data-values="[{'key':'wd_dmy','value':tr('Date format 1')},{'key':'wd_dmy_slash','value':tr('Date format 2')},{'key':'wd_ymd','value':tr('Date format 3')},{'key':'wd_long','value':tr('Date format 4')},{'key':'long','value':tr('Date format 5')},{'key':'dmy','value':tr('Date format 6')},{'key':'dmy_slash','value':tr('Date format 7')},{'key':'d_month','value':tr('Date format 8')},{'key':'weekday','value':tr('Date format 9')}]" />
+<meta name="x-icue-property" content="weatherLocation" data-label="tr('City')" data-type="search-combobox" data-values="CitySearch.getCities" data-default="CitySearch.getDefaultCity" data-placeholder="tr('Search city...')" />
+
+<script type="application/json" id="x-icue-groups">
+[
+	{ "title": "tr('Clock and Weather')", "properties": ["weatherLocation", "tempUnit", "timeFormat", "devName", "devLink"] },
+	{ "title": "tr('Date')", "properties": ["dateType", "dateFormat"] },
+	{ "title": "tr('Appearance')", "properties": ["textColor", "mutedColor", "backgroundColor"] }
+]
+</script>
+</head>
+
+<body>
+<div id="app"><div id="layout">
+	<div class="cell wx" id="wx">
+		<div id="wxIcon"></div>
+		<div class="big" id="temp">--°</div>
+		<div class="lbl"><span id="dn">--</span><span class="dot"></span></div>
+	</div>
+
+	<div class="center">
+		<div class="clock">
+			<div class="hm">
+				<span class="d"><span id="h1">0</span></span><span class="d"><span id="h2">0</span></span>
+				<span class="colon"><i></i><i></i></span>
+				<span class="d"><span id="m1">0</span></span><span class="d"><span id="m2">0</span></span>
+			</div>
+			<div class="side" id="side"><span class="sec" id="sec">00</span><span class="ap" id="ap">AM</span></div>
+		</div>
+		<div class="date" id="date"><span class="fit" id="dateFit"><span class="seg day" id="dateDay"></span><span class="sep">|</span><span class="seg num" id="dateNum">--</span></span></div>
+	</div>
+
+	<div class="cell rain" id="rain">
+		<div id="rainIcon"></div>
+		<div class="big" id="rainPct">--%</div>
+		<div class="lbl" id="rainLbl">--</div>
+	</div>
+</div></div>
+<script src="scripts/main.js"></script>
+</body>
+</html>
