@@ -36,10 +36,6 @@ So I made a digital clock widget with weather for the XENEON EDGE, and I'm shari
 
 ![Weather details](screenshots/widget-details-XL.png)
 
-### 24-hour clock
-
-![24-hour clock](screenshots/widget-24h-XL.png)
-
 ## Installation
 
 1. [Download clock-and-weather.icuewidget](https://github.com/Nawaf-NM/xeneon-edge-clock-weather-widget/raw/main/clock-and-weather.icuewidget) (version 0.0.2)
