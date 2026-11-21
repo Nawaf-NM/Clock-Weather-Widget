@@ -26,10 +26,6 @@ So I made a digital clock widget with weather for the XENEON EDGE, and I'm shari
 | --- | --- |
 | ![L size](screenshots/widget-L.png) | ![XL size](screenshots/widget-XL.png) |
 
-### Weather details (tap the widget)
-
-![Weather details](screenshots/widget-details-XL.png)
-
 ## Installation
 
 - Download the .icuewidget file from the link below
