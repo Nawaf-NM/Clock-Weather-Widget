@@ -4,7 +4,7 @@ When I started using my XENEON EDGE, I couldn't find a single widget that combin
 
 So I made a digital clock widget with weather for the XENEON EDGE, and I'm sharing it for free.
 
-![Tap the widget to see the weather details in every size](screenshots/widget-demo.gif)
+![Tap the widget to see the weather details in every size](screenshots/widget-demo-all-sizes.gif)
 
 ## Features
 
